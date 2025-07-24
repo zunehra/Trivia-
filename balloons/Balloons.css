@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 900px;
+    background-color: rgb(243, 43, 119);
+    overflow: hidden; 
+    
+}
+
+.message {
+    font-size: 23mm;
+    color: white;
+
+}
+.balloon {
+    width: 100px;
+    height: 125px;
+    position: absolute;
+    border-radius: 75% 75% 70% 70% ;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%);}
+
+@keyframes float {
+    0% {
+        top: 100%; 
+    }
+    100% {
+        top: -50px; 
+    }
+}
+
+
+.balloon.red {
+    background-color: rgb(195, 25, 25);
+}
+
+
+.balloon.pink {
+    background-color: rgb(224, 74, 99);
+
+}
+.balloon.redpink {
+    background-color: rgb(242, 36, 70);
+}
+
+
+.balloon.animate {
+    animation: float 6s ease-in forwards; 
+}

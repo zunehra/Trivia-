@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manchester United Trivia</title>
+    <link rel="stylesheet" href="man u trivia.css">
+</head>
+<body>
+<!-- Container for the balloons -->
+<div id="balloon-container"></div>
+
+<!-- Text displayed when the user answers correctly -->
+<div id="weldone-text">Well done!</div>
+
+<!-- Main container for the trivia game -->
+<div class="container">
+    <h1 style="text-align: center;">Manchester United Trivia</h1>
+
+    <!-- Container for the question and answer buttons -->
+    <div id="question-container" class="hide">
+        <div id="question">Question</div>
+        <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+        </div>
+    </div>
+
+    <!-- Control buttons for starting and moving to the next question -->
+    <div class="controls">
+        <button id="start-btn" class="start-btn btn">Start</button>
+        <button id="next-btn" class="next-btn btn hide">Next</button>
+    </div>
+
+    <!-- Container for displaying the result of the user's answer -->
+    <div id="result" class="result hide"></div>
+
+    <!-- Container for displaying the user's score -->
+    <div id="score" class="score">Score: <span id="score-value">0</span></div>
+
+    <!-- Container for the restart button -->
+    <div class="restart-control">
+        <button id="restart-btn" class="restart-btn btn hide">Restart</button>
+    </div>
+</div>
+
+<!-- Link to the JavaScript file -->
+<script src="man u trivia.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+/* Global styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #f8d7da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Main container */
+.container {
+    width: 500px;
+    max-width: 80%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Answer buttons grid */
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Button styles */
+.btn {
+    background-color: #f76c6c;
+    border: 1px solid #f76c6c;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    outline: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border-color: #000;
+}
+
+/* Start and next button styles */
+.start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+/* Controls container */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hide elements */
+.hide {
+    display: none;
+}
+
+/* Result text styles */
+.result {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.correct {
+    color: green;
+}
+
+.wrong {
+    color: red;
+}
+
+/* Score text styles */
+.score {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Restart button styles */
+.restart-btn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Restart control container */
+.restart-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Balloon container styles */
+#balloon-container {
+    height: 100vh;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: opacity 500ms;
+}
+
+/* Balloon styles */
+.balloon {
+    height: 125px;
+    width: 105px;
+    border-radius: 75% 75% 70% 70%;
+    position: relative;
+}
+
+.balloon:before {
+    content: "";
+    height: 75px;
+    width: 1px;
+    padding: 1px;
+    background-color: #FDFD96;
+    display: block;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* Balloon floating animation */
+@keyframes float {
+    from {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-300vh);
+        opacity: 0;
+    }
+}
+
+/* "Well done" text styles */
+#weldone-text {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    color: rgba(255, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transition: opacity 0.5s;
+}
